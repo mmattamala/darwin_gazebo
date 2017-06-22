@@ -1,14 +1,16 @@
 <launch>
 
-   <param name="robot_description" textfile="$(find darwin_description)/urdf/darwin.urdf" />  
+   <param name="robot_description" textfile="$(find darwin_description)/urdf/darwin.urdf"/>  
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="worlds/empty.world"/>
+    <!-- arg name="world_name" value="worlds/empty.world"/ -->
+    <!-- arg name="world_name" value="$(find darwin_gazebo)/worlds/cafe.world"/ -->
+    <arg name="world_name" value="$(find darwin_gazebo)/worlds/neighborhood.world"/>
     <arg name="paused" value="true"/>
     
   </include>
   
-  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find darwin_description)/urdf/darwin.urdf -urdf -model darwin -z 0.3417" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find darwin_description)/urdf/darwin.urdf -urdf -model darwin -z 0.533460" />
 
 
   <include file="$(find darwin_control)/launch/darwin_control.launch"/>

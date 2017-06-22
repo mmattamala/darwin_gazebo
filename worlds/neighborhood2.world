@@ -1,0 +1,2419 @@
+<sdf version='1.6'>
+  <world name='default'>
+    <light name='sun' type='directional'>
+      <cast_shadows>1</cast_shadows>
+      <pose frame=''>0 0 10 0 -0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.5 -1</direction>
+    </light>
+    <model name='ground_plane'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>100</mu>
+                <mu2>50</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='visual'>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Grey</name>
+            </script>
+          </material>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+    </model>
+    <gravity>0 0 -9.8</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <physics name='default_physics' default='0' type='ode'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <model name='Construction Cone'>
+      <static>1</static>
+      <link name='link'>
+        <collision name='collision'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='visual'>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+        <gravity>1</gravity>
+      </link>
+      <pose frame=''>27.7245 -2.23342 0 0 -0 0</pose>
+    </model>
+    <light name='user_point_light_0' type='point'>
+      <pose frame=''>15.0985 0.744681 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <light name='user_point_light_1' type='point'>
+      <pose frame=''>34.675 -1.94923 1 0 -0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <direction>0 0 -1</direction>
+    </light>
+    <state world_name='default'>
+      <sim_time>1166 255000000</sim_time>
+      <real_time>887 300035024</real_time>
+      <wall_time>1498172834 465471421</wall_time>
+      <iterations>838504</iterations>
+      <model name='Construction Cone'>
+        <pose frame=''>27.7245 -2.23342 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>27.7245 -2.23342 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='darwin'>
+        <pose frame=''>2.43055 -0.110809 0.312991 0.001678 -0.00478 -0.26695</pose>
+        <scale>1 1 1</scale>
+        <link name='MP_ANKLE1_L'>
+          <pose frame=''>2.43655 -0.073749 0.032491 0.010194 -1.57 -1.84791</pose>
+          <velocity>-7.6e-05 0.000354 -0.003861 -0.002085 -0.009069 0.000563</velocity>
+          <acceleration>-0.023406 0.105739 -0.29389 -2.6411 -0.445597 -0.388778</acceleration>
+          <wrench>-0.003911 0.01767 -0.049111 0 -0 0</wrench>
+        </link>
+        <link name='MP_ANKLE1_R'>
+          <pose frame=''>2.41686 -0.145096 0.032459 3.11419 1.57009 1.27645</pose>
+          <velocity>4.7e-05 0.000104 -0.007015 0.001047 0.00379 -6e-06</velocity>
+          <acceleration>-0.109773 -0.127013 0.089478 -0.876953 -0.429001 -0.059909</acceleration>
+          <wrench>-0.018344 -0.021225 0.014952 0 -0 0</wrench>
+        </link>
+        <link name='MP_ANKLE2_L'>
+          <pose frame=''>2.43655 -0.073749 0.03249 -0.342633 -1.57079 -3.06587</pose>
+          <velocity>-0.000192 0.000515 -0.003605 -0.016105 -0.005243 0.000562</velocity>
+          <acceleration>-0.020669 0.024669 -0.269877 1.58207 -0.665897 -0.114866</acceleration>
+          <wrench>-0.001642 0.00196 -0.021441 0 -0 0</wrench>
+        </link>
+        <link name='MP_ANKLE2_R'>
+          <pose frame=''>2.41686 -0.145095 0.032467 1.11568 1.57075 0.848737</pose>
+          <velocity>0.00012 -5.7e-05 -0.007921 0.001712 0.00364 -4e-06</velocity>
+          <acceleration>-0.035258 -0.090955 0.110577 0.442996 -0.873927 -0.146758</acceleration>
+          <wrench>-0.002801 -0.007226 0.008785 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_GRIPPER_FIX_L'>
+          <pose frame=''>2.48075 0.072468 0.297155 1.56614 -0.000105 1.30384</pose>
+          <velocity>-2e-05 0.000178 -0.00487 3.3e-05 -1.4e-05 8.4e-05</velocity>
+          <acceleration>0.023986 0.135361 -0.113961 -0.003996 -0.010159 0.012013</acceleration>
+          <wrench>0.00048 0.002707 -0.002279 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_GRIPPER_FIX_R'>
+          <pose frame=''>2.38051 -0.294073 0.296518 1.57548 0.003252 -1.83774</pose>
+          <velocity>1.4e-05 0.000169 -0.004886 -3.6e-05 -7e-06 8.2e-05</velocity>
+          <acceleration>0.023855 0.134589 -0.113703 0.00334 0.010203 0.007817</acceleration>
+          <wrench>0.000477 0.002692 -0.002274 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_GRIPPER_MOV_L'>
+          <pose frame=''>2.49336 0.118779 0.30716 1.56217 -1.00009 1.31111</pose>
+          <velocity>-2.4e-05 0.000179 -0.004873 -0 -6e-06 8.4e-05</velocity>
+          <acceleration>0.023587 0.134499 -0.113194 -0.000153 -0.000338 0.000298</acceleration>
+          <wrench>0.000236 0.001345 -0.001132 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_GRIPPER_MOV_R'>
+          <pose frame=''>2.3678 -0.340392 0.306362 1.57941 -0.996731 -1.84498</pose>
+          <velocity>1.8e-05 0.000168 -0.00489 -3e-06 -1.6e-05 8.2e-05</velocity>
+          <acceleration>0.023475 0.133805 -0.112941 -0.00022 6.4e-05 0.000407</acceleration>
+          <wrench>0.000235 0.001338 -0.001129 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_HIGH_L'>
+          <pose frame=''>2.45226 -0.031707 0.297127 1.57546 0.00026 -1.83775</pose>
+          <velocity>-1e-05 0.000176 -0.004922 0.000451 -0.000129 9.5e-05</velocity>
+          <acceleration>0.023908 0.135163 -0.114483 -0.090172 -0.183696 -0.128299</acceleration>
+          <wrench>0.004026 0.022758 -0.019276 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_HIGH_R'>
+          <pose frame=''>2.409 -0.189898 0.296852 1.56612 -0.003097 1.30386</pose>
+          <velocity>5e-06 0.000172 -0.004938 -0.000459 0.000109 9.2e-05</velocity>
+          <acceleration>0.023716 0.134449 -0.11416 0.094427 0.180233 -0.200959</acceleration>
+          <wrench>0.003993 0.022638 -0.019222 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_LOW_L'>
+          <pose frame=''>2.48352 0.021947 0.297218 -0.004664 -0.00026 1.30384</pose>
+          <velocity>-1.5e-05 0.000178 -0.004893 0.000452 -0.000129 8.6e-05</velocity>
+          <acceleration>0.023951 0.135254 -0.114361 2.38852 -0.284241 -0.209771</acceleration>
+          <wrench>0.00142 0.008019 -0.00678 0 -0 0</wrench>
+        </link>
+        <link name='MP_ARM_LOW_R'>
+          <pose frame=''>2.40861 -0.251994 0.296741 0.004677 0.003097 -1.83774</pose>
+          <velocity>1.1e-05 0.000171 -0.004909 -0.00046 0.000109 8e-05</velocity>
+          <acceleration>0.023786 0.134542 -0.114062 -2.40937 0.296799 -0.266639</acceleration>
+          <wrench>0.00141 0.007977 -0.006763 0 -0 0</wrench>
+        </link>
+        <link name='MP_HEAD'>
+          <pose frame=''>2.43029 -0.110827 0.36364 -1.57248 0.004783 2.87464</pose>
+          <velocity>-5e-06 0.00017 -0.004977 6.1e-05 -1.5e-05 9.7e-05</velocity>
+          <acceleration>0.02077 0.12818 -0.107671 0.000956 0.000355 -0.000565</acceleration>
+          <wrench>0.003283 0.020258 -0.017016 0 -0 0</wrench>
+        </link>
+        <link name='MP_NECK'>
+          <pose frame=''>2.43043 -0.110817 0.33649 -0.00478 -0.001678 1.30386</pose>
+          <velocity>-4e-06 0.000171 -0.004957 6.2e-05 -8e-06 9.7e-05</velocity>
+          <acceleration>0.022658 0.13232 -0.11116 -0.003821 0.026712 1.6e-05</acceleration>
+          <wrench>0.000552 0.003223 -0.002708 0 -0 0</wrench>
+        </link>
+        <link name='MP_PELVIS_L'>
+          <pose frame=''>2.43596 -0.073767 0.21948 3.13681 -0.001675 1.30389</pose>
+          <velocity>-2.3e-05 0.0002 -0.004809 6.3e-05 -1.7e-05 0.000567</velocity>
+          <acceleration>0.009757 0.124978 -0.118166 0.079399 -0.007588 -0.087758</acceleration>
+          <wrench>0.001629 0.020871 -0.019734 0 -0 0</wrench>
+        </link>
+        <link name='MP_PELVIS_R'>
+          <pose frame=''>2.41644 -0.145146 0.219356 -3.13681 0.001681 -1.83775</pose>
+          <velocity>-1e-06 0.00018 -0.004967 6.5e-05 -1.7e-05 -1.1e-05</velocity>
+          <acceleration>0.019432 0.127277 -0.107994 0.099911 -0.016472 0.200345</acceleration>
+          <wrench>0.003828 0.025074 -0.021275 0 -0 0</wrench>
+        </link>
+        <link name='MP_SHOULDER_L'>
+          <pose frame=''>2.44647 -0.052596 0.31309 1.22652 -1.56584 -3.06426</pose>
+          <velocity>-8e-06 0.000173 -0.004892 6.8e-05 -2.4e-05 9.3e-05</velocity>
+          <acceleration>0.026263 0.140244 -0.119662 2.76533 -0.273446 1.4502</acceleration>
+          <wrench>0.000681 0.003634 -0.003101 0 -0 0</wrench>
+        </link>
+        <link name='MP_SHOULDER_R'>
+          <pose frame=''>2.41463 -0.169021 0.312888 1.91649 1.56583 0.078761</pose>
+          <velocity>3e-06 0.000171 -0.004907 5.5e-05 -3.2e-05 9.4e-05</velocity>
+          <acceleration>0.025975 0.139459 -0.119158 -2.33663 0.540076 2.75654</acceleration>
+          <wrench>0.000673 0.003614 -0.003088 0 -0 0</wrench>
+        </link>
+        <link name='MP_THIGH1_L'>
+          <pose frame=''>2.4361 -0.073757 0.190828 -1.57558 -0.000798 1.30389</pose>
+          <velocity>-4e-05 0.000225 -0.00459 0.000364 -0.000107 0.000569</velocity>
+          <acceleration>-0.000391 0.125365 -0.136281 -0.027739 -0.028634 -0.136752</acceleration>
+          <wrench>-4.7e-05 0.014924 -0.016223 0 -0 0</wrench>
+        </link>
+        <link name='MP_THIGH1_R'>
+          <pose frame=''>2.41658 -0.145136 0.190705 1.57558 0.0007 -1.83776</pose>
+          <velocity>4e-06 0.000173 -0.005097 6e-06 -0 -1.1e-05</velocity>
+          <acceleration>0.014307 0.099539 -0.093791 -0.77191 -0.501393 0.1921</acceleration>
+          <wrench>0.001703 0.011849 -0.011165 0 -0 0</wrench>
+        </link>
+        <link name='MP_THIGH2_L'>
+          <pose frame=''>2.4361 -0.073757 0.190827 -1.57231 -1.01567 2.87596</pose>
+          <velocity>-5.5e-05 0.000247 -0.00441 -0.000105 -0.001834 0.000567</velocity>
+          <acceleration>-0.028744 0.12736 -0.162619 1.60576 -0.107438 2.21645</acceleration>
+          <wrench>-0.003422 0.015161 -0.019359 0 -0 0</wrench>
+        </link>
+        <link name='MP_THIGH2_R'>
+          <pose frame=''>2.41658 -0.145136 0.190707 -1.56947 1.01596 -0.26582</pose>
+          <velocity>1.6e-05 0.000154 -0.005418 0.001815 0.006609 -7e-06</velocity>
+          <acceleration>0.017483 0.033735 -0.048401 3.04172 -1.39386 -1.20342</acceleration>
+          <wrench>0.002081 0.004016 -0.005762 0 -0 0</wrench>
+        </link>
+        <link name='MP_TIBIA_L'>
+          <pose frame=''>2.4834 -0.086623 0.111792 1.57232 -1.02113 -0.268208</pose>
+          <velocity>6.8e-05 0.000306 -0.003974 0.00085 0.00166 0.000572</velocity>
+          <acceleration>-0.037174 0.117431 -0.214249 -1.10839 -0.144663 0.868394</acceleration>
+          <wrench>-0.002614 0.008257 -0.015064 0 -0 0</wrench>
+        </link>
+        <link name='MP_TIBIA_R'>
+          <pose frame=''>2.46386 -0.158007 0.11166 1.56945 1.01919 2.87349</pose>
+          <velocity>-0.000498 0.000284 -0.005986 -0.001807 -0.006645 -1.5e-05</velocity>
+          <acceleration>-0.04733 -0.041138 0.026308 0.605265 -1.19228 -2.90514</acceleration>
+          <wrench>-0.003328 -0.002892 0.00185 0 -0 0</wrench>
+        </link>
+        <link name='base_link'>
+          <pose frame=''>2.43055 -0.110809 0.312991 0.001678 -0.00478 -0.26695</pose>
+          <velocity>-6e-06 0.000174 -0.005003 6.5e-05 -1.7e-05 9.4e-05</velocity>
+          <acceleration>0.01817 0.122607 -0.103066 0.002353 -0.000554 0.00076</acceleration>
+          <wrench>0.01809 0.122068 -0.102613 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <light name='sun'>
+        <pose frame=''>0 0 10 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_0'>
+        <pose frame=''>15.0985 0.744681 7 0 -0 0</pose>
+      </light>
+      <light name='user_point_light_1'>
+        <pose frame=''>34.675 -1.94923 3 0 -0 0</pose>
+      </light>
+    </state>
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose frame=''>-15.2746 1.56616 10.9045 0 0.529796 -0.212002</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <model name='darwin'>
+      <link name='base_link'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <inertial>
+          <pose frame=''>-0.003023 -0.038072 -0.019086 0 -0 0</pose>
+          <mass>0.995599</mass>
+          <inertia>
+            <ixx>9.32461</ixx>
+            <ixy>-0.254601</ixy>
+            <ixz>2.03182</ixz>
+            <iyy>17.0421</iyy>
+            <iyz>-0.164173</iyz>
+            <izz>18.0893</izz>
+          </inertia>
+        </inertial>
+        <collision name='base_link_fixed_joint_lump__MP_BODY_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/body_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__MP_BACK_L_collision_1'>
+          <pose frame=''>0 0.06035 0 -1.5708 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='base_link_fixed_joint_lump__MP_BACK_R_collision_2'>
+          <pose frame=''>0 -0.06035 0 1.5708 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='base_link_fixed_joint_lump__MP_BODY_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/body.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__MP_BACK_L_visual_1'>
+          <pose frame=''>0 0.06035 0 -1.5708 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='base_link_fixed_joint_lump__MP_BACK_R_visual_2'>
+          <pose frame=''>0 -0.06035 0 1.5708 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.001 0.001 0.001</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <link name='MP_SHOULDER_L'>
+        <pose frame=''>0 0.06035 0 2.3562 -1.57079 2.3562</pose>
+        <inertial>
+          <pose frame=''>-0.013523 0.010264 0.001394 0 -0 0</pose>
+          <mass>0.025913</mass>
+          <inertia>
+            <ixx>0.00977582</ixx>
+            <ixy>0.00169118</ixy>
+            <ixz>-0.000451743</ixz>
+            <iyy>0.0105111</iyy>
+            <iyz>0.00033407</iyz>
+            <izz>0.0054768</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_SHOULDER_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/shoulder_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_SHOULDER_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/shoulder_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_shoulder_l' type='revolute'>
+        <child>MP_SHOULDER_L</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_HIGH_L'>
+        <pose frame=''>-0 0.082 -0.016 1.5708 0 -1.5708</pose>
+        <inertial>
+          <pose frame=''>-0.036239 0.000734 0.00066 0 -0 0</pose>
+          <mass>0.168377</mass>
+          <inertia>
+            <ixx>0.122028</ixx>
+            <ixy>-0.00208126</ixy>
+            <ixz>-0.000881434</ixz>
+            <iyy>0.0380884</iyy>
+            <iyz>0.00182514</iyz>
+            <izz>0.113408</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_HIGH_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/arm_high_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_HIGH_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/arm_high_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_high_arm_l' type='revolute'>
+        <child>MP_ARM_HIGH_L</child>
+        <parent>MP_SHOULDER_L</parent>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.64867</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_LOW_L'>
+        <pose frame=''>0.016 0.142 -0.016 0 -0 1.57079</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.0592885</mass>
+          <inertia>
+            <ixx>0.0868553</ixx>
+            <ixy>0.00530203</ixy>
+            <ixz>0.000436361</ixz>
+            <iyy>0.0211921</iyy>
+            <iyz>-0.00648559</iyz>
+            <izz>0.0868455</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_LOW_L_collision'>
+          <pose frame=''>0.016 0.016 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.032 0.035</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_LOW_L_visual'>
+          <pose frame=''>0.016 0.016 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.032 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_low_arm_l' type='revolute'>
+        <child>MP_ARM_LOW_L</child>
+        <parent>MP_ARM_HIGH_L</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_GRIPPER_FIX_L'>
+        <pose frame=''>0 0.19 -0.016 1.5708 -0 1.57079</pose>
+        <inertial>
+          <pose frame=''>0.054919 -0.011745 0.003333 0 -0 0</pose>
+          <mass>0.02</mass>
+          <inertia>
+            <ixx>0.244057</ixx>
+            <ixy>-0.00416284</ixy>
+            <ixz>-0.00176226</ixz>
+            <iyy>0.0761788</iyy>
+            <iyz>0.00365041</iyz>
+            <izz>0.226818</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_GRIPPER_FIX_L_collision'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.064 0.032 0.032</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='MP_ARM_GRIPPER_FIX_L_fixed_joint_lump__MP_ARM_GRIPPER_FIX_DUMMY_L_collision_1'>
+          <pose frame=''>0.064 -0.01 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_GRIPPER_FIX_L_visual'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.064 0.032 0.032</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='MP_ARM_GRIPPER_FIX_L_fixed_joint_lump__MP_ARM_GRIPPER_FIX_DUMMY_L_visual_1'>
+          <pose frame=''>0.064 -0.01 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_wrist_l' type='revolute'>
+        <child>MP_ARM_GRIPPER_FIX_L</child>
+        <parent>MP_ARM_LOW_L</parent>
+        <axis>
+          <xyz>1 -3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_GRIPPER_MOV_L'>
+        <pose frame=''>0 0.238 -0.006 1.5708 -1 1.57079</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.122028</ixx>
+            <ixy>-0.00208126</ixy>
+            <ixz>-0.000881434</ixz>
+            <iyy>0.0380884</iyy>
+            <iyz>0.00182514</iyz>
+            <izz>0.113408</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_GRIPPER_MOV_L_fixed_joint_lump__COL_MP_ARM_GRIPPER_MOV_L_collision'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='MP_ARM_GRIPPER_MOV_L_fixed_joint_lump__COL_MP_ARM_GRIPPER_MOV_EXT_L_collision_1'>
+          <pose frame=''>0.031 -0.0025 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.002 0.01 0.032</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='MP_ARM_GRIPPER_MOV_L_fixed_joint_lump__VIS_MP_ARM_GRIPPER_MOV_L_visual'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='MP_ARM_GRIPPER_MOV_L_fixed_joint_lump__VIS_MP_ARM_GRIPPER_MOV_EXT_L_visual_1'>
+          <pose frame=''>0.031 -0.0025 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.002 0.01 0.032</size>
+            </box>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_gripper_l' type='revolute'>
+        <child>MP_ARM_GRIPPER_MOV_L</child>
+        <parent>MP_ARM_GRIPPER_FIX_L</parent>
+        <axis>
+          <xyz>1 -3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_SHOULDER_R'>
+        <pose frame=''>0 -0.06035 0 -2.3562 1.57079 2.3562</pose>
+        <inertial>
+          <pose frame=''>-0.013523 0.010264 0.001394 0 -0 0</pose>
+          <mass>0.025913</mass>
+          <inertia>
+            <ixx>0.00977582</ixx>
+            <ixy>0.00169118</ixy>
+            <ixz>-0.000451743</ixz>
+            <iyy>0.0105111</iyy>
+            <iyz>0.00033407</iyz>
+            <izz>0.0054768</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_SHOULDER_R_collision'>
+          <pose frame=''>0 0 0 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/shoulder_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_SHOULDER_R_visual'>
+          <pose frame=''>0 0 0 0 -0 3.14</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/shoulder_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_shoulder_r' type='revolute'>
+        <child>MP_SHOULDER_R</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_HIGH_R'>
+        <pose frame=''>0 -0.082 -0.016 1.5708 -0 1.5708</pose>
+        <inertial>
+          <pose frame=''>-0.036239 0.000734 -0.00066 0 -0 0</pose>
+          <mass>0.168377</mass>
+          <inertia>
+            <ixx>0.122028</ixx>
+            <ixy>-0.00208126</ixy>
+            <ixz>-0.000881434</ixz>
+            <iyy>0.0380884</iyy>
+            <iyz>0.00182514</iyz>
+            <izz>0.113408</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_HIGH_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/arm_high_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_HIGH_R_visual'>
+          <pose frame=''>0 0 0 3.14 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/arm_high_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_high_arm_r' type='revolute'>
+        <child>MP_ARM_HIGH_R</child>
+        <parent>MP_SHOULDER_R</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.64867</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_LOW_R'>
+        <pose frame=''>0.016 -0.142 -0.016 0 -0 -1.5708</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.0592885</mass>
+          <inertia>
+            <ixx>0.0868553</ixx>
+            <ixy>0.00530203</ixy>
+            <ixz>0.000436361</ixz>
+            <iyy>0.0211921</iyy>
+            <iyz>-0.00648559</iyz>
+            <izz>0.0868455</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_LOW_R_collision'>
+          <pose frame=''>0.016 -0.016 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.032 0.035</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_LOW_R_visual'>
+          <pose frame=''>0.016 -0.016 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.032 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_low_arm_r' type='revolute'>
+        <child>MP_ARM_LOW_R</child>
+        <parent>MP_ARM_HIGH_R</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.635</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_GRIPPER_FIX_R'>
+        <pose frame=''>-0 -0.19 -0.016 1.5708 0 -1.5708</pose>
+        <inertial>
+          <pose frame=''>0.054919 -0.011745 0.003333 0 -0 0</pose>
+          <mass>0.02</mass>
+          <inertia>
+            <ixx>0.244057</ixx>
+            <ixy>-0.00416284</ixy>
+            <ixz>-0.00176226</ixz>
+            <iyy>0.0761788</iyy>
+            <iyz>0.00365041</iyz>
+            <izz>0.226818</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_GRIPPER_FIX_R_collision'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.064 0.032 0.032</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <collision name='MP_ARM_GRIPPER_FIX_R_fixed_joint_lump__MP_ARM_GRIPPER_FIX_DUMMY_R_collision_1'>
+          <pose frame=''>0.064 -0.01 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ARM_GRIPPER_FIX_R_visual'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.064 0.032 0.032</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <visual name='MP_ARM_GRIPPER_FIX_R_fixed_joint_lump__MP_ARM_GRIPPER_FIX_DUMMY_R_visual_1'>
+          <pose frame=''>0.064 -0.01 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_wrist_r' type='revolute'>
+        <child>MP_ARM_GRIPPER_FIX_R</child>
+        <parent>MP_ARM_LOW_R</parent>
+        <axis>
+          <xyz>-1 3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ARM_GRIPPER_MOV_R'>
+        <pose frame=''>-0 -0.238 -0.006 1.5708 -1 -1.5708</pose>
+        <inertial>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <mass>0.01</mass>
+          <inertia>
+            <ixx>0.122028</ixx>
+            <ixy>-0.00208126</ixy>
+            <ixz>-0.000881434</ixz>
+            <iyy>0.0380884</iyy>
+            <iyz>0.00182514</iyz>
+            <izz>0.113408</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ARM_GRIPPER_MOV_R_fixed_joint_lump__COL_MP_ARM_GRIPPER_MOV_R_collision'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <collision name='MP_ARM_GRIPPER_MOV_R_fixed_joint_lump__COL_MP_ARM_GRIPPER_MOV_EXT_R_collision_1'>
+          <pose frame=''>0.031 -0.0025 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.002 0.01 0.032</size>
+            </box>
+          </geometry>
+          <max_contacts>10</max_contacts>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+            <friction>
+              <torsional>
+                <ode/>
+              </torsional>
+              <ode/>
+            </friction>
+          </surface>
+        </collision>
+        <visual name='MP_ARM_GRIPPER_MOV_R_fixed_joint_lump__VIS_MP_ARM_GRIPPER_MOV_R_visual'>
+          <pose frame=''>0.016 0 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.032 0.005 0.032</size>
+            </box>
+          </geometry>
+        </visual>
+        <visual name='MP_ARM_GRIPPER_MOV_R_fixed_joint_lump__VIS_MP_ARM_GRIPPER_MOV_EXT_R_visual_1'>
+          <pose frame=''>0.031 -0.0025 0 0 -0 0</pose>
+          <geometry>
+            <box>
+              <size>0.002 0.01 0.032</size>
+            </box>
+          </geometry>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_gripper_r' type='revolute'>
+        <child>MP_ARM_GRIPPER_MOV_R</child>
+        <parent>MP_ARM_GRIPPER_FIX_R</parent>
+        <axis>
+          <xyz>-1 3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_NECK'>
+        <pose frame=''>0 0 0.0235 0 -0 1.5708</pose>
+        <inertial>
+          <pose frame=''>0.001424 -0.016567 -0.007128 0 -0 0</pose>
+          <mass>0.0243577</mass>
+          <inertia>
+            <ixx>0.00514111</ixx>
+            <ixy>-0.000575303</ixy>
+            <ixz>-2.4729e-05</ixz>
+            <iyy>0.00819157</iyy>
+            <iyz>-1.92231e-05</iyz>
+            <izz>0.00113798</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_NECK_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/neck_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_NECK_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/neck.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_pan' type='revolute'>
+        <child>MP_NECK</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_HEAD'>
+        <pose frame=''>0 0 0.05065 -1.5708 -0 3.14159</pose>
+        <inertial>
+          <pose frame=''>6.4e-05 -0.018565 -0.007667 0 -0 0</pose>
+          <mass>0.158042</mass>
+          <inertia>
+            <ixx>0.123968</ixx>
+            <ixy>7.84944e-05</ixy>
+            <ixz>7.64598e-06</ixz>
+            <iyy>0.117838</iyy>
+            <iyz>0.00121992</iyz>
+            <izz>0.15836</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_HEAD_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/head_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_HEAD_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/head.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <velocity_decay/>
+        <velocity_decay/>
+        <sensor name='camera' type='camera'>
+          <pose frame=''>-0.05 -0.01 0 -1.5708 -0 -3.14159</pose>
+          <camera name='__default__'>
+            <horizontal_fov>1.0123</horizontal_fov>
+            <image>
+              <width>320</width>
+              <height>200</height>
+            </image>
+            <clip>
+              <near>0.001</near>
+              <far>100</far>
+            </clip>
+          </camera>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>1</visualize>
+          <plugin name='camera_controller' filename='libgazebo_ros_camera.so'>
+            <alwaysOn>true</alwaysOn>
+            <updateRate>30</updateRate>
+            <cameraName>darwin/camera</cameraName>
+            <imageTopicName>image_raw</imageTopicName>
+            <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+            <frameName>camera_link</frameName>
+            <hackBaseline>0.07</hackBaseline>
+            <distortionK1>0.0</distortionK1>
+            <distortionK2>0.0</distortionK2>
+            <distortionK3>0.0</distortionK3>
+            <distortionT1>0.0</distortionT1>
+            <distortionT2>0.0</distortionT2>
+            <robotNamespace>/</robotNamespace>
+          </plugin>
+        </sensor>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_tilt' type='revolute'>
+        <child>MP_HEAD</child>
+        <parent>MP_NECK</parent>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>2.8</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_PELVIS_L'>
+        <pose frame=''>-0.005 0.037 -0.09355 3.14159 3e-06 1.5708</pose>
+        <inertial>
+          <pose frame=''>0 0.00048 0.018437 0 -0 0</pose>
+          <mass>0.167</mass>
+          <inertia>
+            <ixx>0.122597</ixx>
+            <ixy>0.000711275</ixy>
+            <ixz>0.000811439</ixz>
+            <iyy>0.110666</iyy>
+            <iyz>-0.00716355</iyz>
+            <izz>0.0418777</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_PELVIS_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/pelvis_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_PELVIS_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/pelvis_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_pelvis_l' type='revolute'>
+        <child>MP_PELVIS_L</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 -3e-06 -1</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_THIGH1_L'>
+        <pose frame=''>-0.005 0.037 -0.122202 -1.5708 3e-06 1.5708</pose>
+        <inertial>
+          <pose frame=''>7.9e-05 0.018242 0.013873 0 -0 0</pose>
+          <mass>0.119043</mass>
+          <inertia>
+            <ixx>0.0979503</ixx>
+            <ixy>0.00121194</ixy>
+            <ixz>-0.00021223</ixz>
+            <iyy>0.0328483</iyy>
+            <iyz>-0.0019474</iyz>
+            <izz>0.114935</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_THIGH1_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh1_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_THIGH1_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh1_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_thigh1_l' type='revolute'>
+        <child>MP_THIGH1_L</child>
+        <parent>MP_PELVIS_L</parent>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_THIGH2_L'>
+        <pose frame=''>-0.005 0.037 -0.122202 -0.009996 -1.57079 1.58079</pose>
+        <inertial>
+          <pose frame=''>-0.062965 -0.000323 0.000692 0 -0 0</pose>
+          <mass>0.119043</mass>
+          <inertia>
+            <ixx>0.0979503</ixx>
+            <ixy>0.00121194</ixy>
+            <ixz>-0.00021223</ixz>
+            <iyy>0.0328483</iyy>
+            <iyz>-0.0019474</iyz>
+            <izz>0.114935</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_THIGH2_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh2_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_THIGH2_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh2_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_thigh2_l' type='revolute'>
+        <child>MP_THIGH2_L</child>
+        <parent>MP_THIGH1_L</parent>
+        <axis>
+          <xyz>0 -1 3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_TIBIA_L'>
+        <pose frame=''>-0.005 0.037 -0.215202 -0.009996 -1.57079 1.58079</pose>
+        <inertial>
+          <pose frame=''>-0.053955 0.006548 -0.000592 0 -0 0</pose>
+          <mass>0.0703098</mass>
+          <inertia>
+            <ixx>0.0933696</ixx>
+            <ixy>-0.000935674</ixy>
+            <ixz>-0.000239921</ixz>
+            <iyy>0.0462955</iyy>
+            <iyz>-0.0128585</iyz>
+            <izz>0.113515</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_TIBIA_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/tibia_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_TIBIA_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/tibia_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_tibia_l' type='revolute'>
+        <child>MP_TIBIA_L</child>
+        <parent>MP_THIGH2_L</parent>
+        <axis>
+          <xyz>0 -1 3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ANKLE1_L'>
+        <pose frame=''>-0.005 0.036999 -0.308202 3.13159 -1.57079 1.58079</pose>
+        <inertial>
+          <pose frame=''>-0.000214 -0.018536 0.013873 0 -0 0</pose>
+          <mass>0.167108</mass>
+          <inertia>
+            <ixx>0.120792</ixx>
+            <ixy>-0.000797811</ixy>
+            <ixz>-0.000393222</ixz>
+            <iyy>0.108855</iyy>
+            <iyz>0.00707701</iyz>
+            <izz>0.0418711</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ANKLE1_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle1_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ANKLE1_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle1_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_ankle1_l' type='revolute'>
+        <child>MP_ANKLE1_L</child>
+        <parent>MP_TIBIA_L</parent>
+        <axis>
+          <xyz>3e-06 1 -3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ANKLE2_L'>
+        <pose frame=''>-0.005 0.036999 -0.308202 1.5608 -1.57079 1.58079</pose>
+        <inertial>
+          <pose frame=''>-0.025995 -0.009506 -0.000503 0 -0 0</pose>
+          <mass>0.0794462</mass>
+          <inertia>
+            <ixx>0.120792</ixx>
+            <ixy>-0.000797811</ixy>
+            <ixz>-0.000393222</ixz>
+            <iyy>0.108855</iyy>
+            <iyz>0.00707701</iyz>
+            <izz>0.0418711</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ANKLE2_L_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle2_l_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>10</kd>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>9000</mu>
+                <mu2>9000</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='MP_ANKLE2_L_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle2_l.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_ankle2_l' type='revolute'>
+        <child>MP_ANKLE2_L</child>
+        <parent>MP_ANKLE1_L</parent>
+        <axis>
+          <xyz>1 -3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_PELVIS_R'>
+        <pose frame=''>-0.005 -0.037 -0.09355 3.14159 3e-06 -1.5708</pose>
+        <inertial>
+          <pose frame=''>0 0.00048 0.018437 0 -0 0</pose>
+          <mass>0.197</mass>
+          <inertia>
+            <ixx>0.122597</ixx>
+            <ixy>0.000711275</ixy>
+            <ixz>0.000811439</ixz>
+            <iyy>0.110666</iyy>
+            <iyz>-0.00716355</iyz>
+            <izz>0.0418777</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_PELVIS_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/pelvis_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_PELVIS_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/pelvis_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_pelvis_r' type='revolute'>
+        <child>MP_PELVIS_R</child>
+        <parent>base_link</parent>
+        <axis>
+          <xyz>0 3e-06 -1</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_THIGH1_R'>
+        <pose frame=''>-0.005 -0.037 -0.122202 1.5708 3e-06 -1.5708</pose>
+        <inertial>
+          <pose frame=''>7.9e-05 -0.018242 0.013874 0 -0 0</pose>
+          <mass>0.119043</mass>
+          <inertia>
+            <ixx>0.0979503</ixx>
+            <ixy>0.00121194</ixy>
+            <ixz>-0.00021223</ixz>
+            <iyy>0.0328483</iyy>
+            <iyz>-0.0019474</iyz>
+            <izz>0.114935</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_THIGH1_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh1_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_THIGH1_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh1_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_thigh1_r' type='revolute'>
+        <child>MP_THIGH1_R</child>
+        <parent>MP_PELVIS_R</parent>
+        <axis>
+          <xyz>-1 0 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_THIGH2_R'>
+        <pose frame=''>-0.005 -0.037 -0.122202 -0.0102 1.57079 1.5606</pose>
+        <inertial>
+          <pose frame=''>0.062965 -0.000323 0.000692 0 -0 0</pose>
+          <mass>0.119043</mass>
+          <inertia>
+            <ixx>0.0979503</ixx>
+            <ixy>0.00121194</ixy>
+            <ixz>-0.00021223</ixz>
+            <iyy>0.0328483</iyy>
+            <iyz>-0.0019474</iyz>
+            <izz>0.114935</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_THIGH2_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh2_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_THIGH2_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/thigh2_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_thigh2_r' type='revolute'>
+        <child>MP_THIGH2_R</child>
+        <parent>MP_THIGH1_R</parent>
+        <axis>
+          <xyz>0 1 3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_TIBIA_R'>
+        <pose frame=''>-0.005 -0.037 -0.215202 -0.0102 1.57079 1.5606</pose>
+        <inertial>
+          <pose frame=''>0.053955 0.006548 -0.000592 0 -0 0</pose>
+          <mass>0.0703098</mass>
+          <inertia>
+            <ixx>0.0933696</ixx>
+            <ixy>-0.000935674</ixy>
+            <ixz>-0.000239921</ixz>
+            <iyy>0.0462955</iyy>
+            <iyz>-0.0128585</iyz>
+            <izz>0.113515</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_TIBIA_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/tibia_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_TIBIA_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/tibia_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_tibia_r' type='revolute'>
+        <child>MP_TIBIA_R</child>
+        <parent>MP_THIGH2_R</parent>
+        <axis>
+          <xyz>0 1 3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ANKLE1_R'>
+        <pose frame=''>-0.005 -0.036999 -0.308202 3.13139 1.57079 1.5606</pose>
+        <inertial>
+          <pose frame=''>-0.000214 -0.018536 -0.013873 0 -0 0</pose>
+          <mass>0.167108</mass>
+          <inertia>
+            <ixx>0.120792</ixx>
+            <ixy>-0.000797811</ixy>
+            <ixz>-0.000393222</ixz>
+            <iyy>0.108855</iyy>
+            <iyz>0.00707701</iyz>
+            <izz>0.0418711</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ANKLE1_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle1_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode/>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='MP_ANKLE1_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle1_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_ankle1_r' type='revolute'>
+        <child>MP_ANKLE1_R</child>
+        <parent>MP_TIBIA_R</parent>
+        <axis>
+          <xyz>3e-06 -1 -3e-06</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <link name='MP_ANKLE2_R'>
+        <pose frame=''>-0.005 -0.036999 -0.308202 1.56059 1.57079 1.5606</pose>
+        <inertial>
+          <pose frame=''>0.025995 -0.009506 -0.000503 0 -0 0</pose>
+          <mass>0.0794462</mass>
+          <inertia>
+            <ixx>0.120792</ixx>
+            <ixy>-0.000797811</ixy>
+            <ixz>-0.000393222</ixz>
+            <iyy>0.108855</iyy>
+            <iyz>0.00707701</iyz>
+            <izz>0.0418711</izz>
+          </inertia>
+        </inertial>
+        <collision name='MP_ANKLE2_R_collision'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle2_r_coll.stl</uri>
+            </mesh>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <kp>1e+06</kp>
+                <kd>10</kd>
+                <min_depth>0.001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>9000</mu>
+                <mu2>9000</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <bounce/>
+          </surface>
+          <max_contacts>1</max_contacts>
+        </collision>
+        <visual name='MP_ANKLE2_R_visual'>
+          <pose frame=''>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>1 1 1</scale>
+              <uri>/home/jonsnow/catkin_ws/src/darwin_description/meshes/ankle2_r.STL</uri>
+            </mesh>
+          </geometry>
+          <material>
+            <script>
+              <name>Gazebo/Grey</name>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+            </script>
+          </material>
+        </visual>
+        <gravity>1</gravity>
+        <velocity_decay/>
+        <self_collide>0</self_collide>
+        <kinematic>0</kinematic>
+      </link>
+      <joint name='j_ankle2_r' type='revolute'>
+        <child>MP_ANKLE2_R</child>
+        <parent>MP_ANKLE1_R</parent>
+        <axis>
+          <xyz>1 3e-06 0</xyz>
+          <limit>
+            <lower>-2.61799</lower>
+            <upper>2.61799</upper>
+            <effort>10</effort>
+            <velocity>5.65487</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+          <use_parent_model_frame>1</use_parent_model_frame>
+        </axis>
+      </joint>
+      <plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+        <robotNamespace>/darwin</robotNamespace>
+      </plugin>
+      <static>0</static>
+      <plugin name='gazebo_ros_imu' filename='libhector_gazebo_ros_imu.so'>
+        <updateRate>50</updateRate>
+        <serviceName>/darwin/imu_service</serviceName>
+        <topicName>/darwin/imu</topicName>
+        <gaussianNoise>0</gaussianNoise>
+        <robotNamespace>/</robotNamespace>
+        <bodyName>base_link</bodyName>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 -0.0122735</rpyOffset>
+      </plugin>
+      <pose frame=''>0 0 0.53346 0 -0 0</pose>
+    </model>
+  </world>
+</sdf>
